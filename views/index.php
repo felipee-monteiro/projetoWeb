@@ -13,7 +13,7 @@ echo ' <div class="px-4 pt-5 my-5 text-center border-bottom">
     </div>
     <div class="overflow-hidden" style="max-height: 30vh;">
       <div class="container px-5">
-        <img src="https://img.freepik.com/vetores-gratis/console-com-letras-de-jogos-sinal-de-neon-no-fundo-do-tijolo_1262-11854.jpg?w=826&t=st=1668860230~exp=1668860830~hmac=8fc36117feeaad3842f01910fe91e38f57a7dfa7f66674421cba1957fca23e23" class="img-fluid  border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+        <img src="https://as1.ftcdn.net/v2/jpg/04/53/50/30/1000_F_453503025_LCOzZx1PHy1woKaRdNAcn1ba2LJLcBI4.jpg" class="img-fluid  border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
       </div>
     </div>
   </div>';
