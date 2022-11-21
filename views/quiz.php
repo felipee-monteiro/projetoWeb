@@ -18,7 +18,7 @@
             }
         }
      } else {
-        generateTemplate("<div class='h-100 d-flex justify-content-center align-items-center'>Não tem nada aqui!</div>");
+        generateTemplate("<div class='h-100 d-flex justify-content-center align-items-center'>ERROR 404</div>");
      }
  }
 
