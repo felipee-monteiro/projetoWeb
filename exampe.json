@@ -18,7 +18,8 @@
             "Amarelo",
             "Rosa",
             "Preto"
-        ]
+        ],
+        "correctAnswer": "C"
       },
       {
         "title": "Qual era a cor do cavalo branco de napoleão ?",
@@ -27,7 +28,8 @@
             "Amarelo",
             "Preto",
             "Branco"
-        ]
+        ],
+        "correctAnswer": "C"
       }
     ]
 }
