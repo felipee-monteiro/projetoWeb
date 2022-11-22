@@ -1,6 +1,6 @@
 <?php 
     require_once "../database/connection.php";
-    require_once "../database/quizzes.php";
+    require_once "../database/getQuizData.php";
     include_once "../includes/htmlTemplate.php";
 
     $quizContentAsArray = array();
