@@ -1,11 +1,13 @@
 <?php
 
-    // if (isset($_POST['questions'], $_POST['title'], $_POST['tema'])) {
-    //     $title = $_POST['title'];
-    //     $theme = $_POST['tema'];
-    //     $questions = $_POST['questions'];
+    require_once "../database/connection.php";
+    require_once "../database/getQuizData.php";
 
-        print_r($_POST);
-    // }
-
+    if (isset($_POST['questions'], $_POST['title'], $_POST['theme'])) {
+        $title = $_POST['title'];
+        $theme = $_POST['theme'];
+        $questions = $_POST['questions'];
+        $questionAsjson = json_encode($_POST);
+        getQuizData($connection, "INSERT INTO `quiz_data` (`data`) VALUES ($questionAsjson);");   
+    }
 ?>
