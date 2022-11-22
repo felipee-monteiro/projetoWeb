@@ -4,10 +4,10 @@ include "../includes/htmlTemplate.php";
 
 $newQuizContent = '
   <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
+    <div class="g-lg-5 py-5">
+      <div class="w-100 col-lg-7 text-center" style="margin-bottom: 5rem;">
         <h1 class="display-4 fw-bold lh-1 mb-3">Personalize seus quizzes a gosto.</h1>
-        <p class="col-lg-10 fs-4">Aqui você poderá montar seus quizzes e encontrar outros que estejam adaptados a suas tendências.</p>
+        <p class="fs-4">Aqui você poderá montar seus quizzes e encontrar outros que estejam adaptados a suas tendências.</p>
       </div>
       <div class="col-md-10 mx-auto col-lg-5 inputs-wrapper">
         <form class="p-4 p-md-5 border rounded-3 bg-light" id="new-quiz-form" method="POST" action="../database/createQuiz.php">
@@ -92,33 +92,15 @@ $newQuizContent = '
 
 $script = "
         const addButton = document.querySelector('#add-button');
-        const mainLabel = document.querySelector('#main-label');
+        const inputsWrapper = document.querySelector('#inputs-wrapper');
         let inputs = 0;
 
-        function createElement(elementName){
-          return document.createElement(elementName);
-        }
-
-        function createInputWithLabel(){
-           const input = createElement('input');
-           const label = createElement('label');
-           input.className = 'form-control my-4';
-           input.id = 'question-' + inputs;
-           input.name = 'questions[' + inputs +']';
-           label.innerHTML = 'Pergunta ' + inputs;
-           label.for = input.id;
-            
-           return input;
-        }
-
-        function addInputIntoDom(){
-           mainLabel.after(createInputWithLabel());
-        }
-
-        if (addButton && mainLabel) {
+        if (addButton && inputsWrapper) {
             addButton.onclick = () => {
               inputs++;
-              addInputIntoDom();    
+              const node = inputsWrapper.cloneNode({deep: true});
+              inputsWrapper.after(node);
+
             }
         }
 ";
