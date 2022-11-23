@@ -16,29 +16,29 @@ $newQuizContent = '
             <label for="floatingInput">Título</label>
           </div>  
           <fieldset>
-          <legend> Tema </legend>
+          <legend>Tema</legend>
           <div>
-            <p><label> <input type = "checkbox" id = "cinema" name = "tema" value = "cinema">
+            <p><label> <input type = "checkbox" id = "cinema" name = "theme" value = "cinema">
              <label for="cine"> Cinema </label></p>
           </div>
           <div>
-            <p><label> <input type = "checkbox" id = "geografia" name = "tema" value = "geografia">
+            <p><label> <input type = "checkbox" id = "geografia" name = "theme" value = "geografia">
             <label for = "geografia"> Geografia </label> </label></p>
           </div>
           <div>
-            <p><label> <input type = "checkbox" id = "musica" name = "tema" value = "musica">
+            <p><label> <input type = "checkbox" id = "musica" name = "theme" value = "musica">
             <label for = "musica"> Música </label> </label></p>
           </div>
           <div>
-            <p><label> <input type = "checkbox" id = "esportes" name = "tema" value = "esportes">
+            <p><label> <input type = "checkbox" id = "esportes" name = "theme" value = "esportes">
             <label for = "esportes"> Esportes </label> </label></p>
           </div>
           <div>
-            <p><label> <input type = "checkbox" id = "ciencias" name = "tema" value = "ciencias">
+            <p><label> <input type = "checkbox" id = "ciencias" name = "theme" value = "ciencias">
             <label for = "ciencias"> Ciências </label> </label></p>
           </div>
           <div>
-            <p><label> <input type = "checkbox" id = "conhecimentosgerais" name = "tema" value = "conhecimentosgerais">
+            <p><label> <input type = "checkbox" id = "conhecimentosgerais" name = "theme" value = "conhecimentosgerais">
             <label for = "conhecimentosgerais"> Conhecimentos Gerais </ label> </label></p>
           </div>
           <div>
@@ -70,14 +70,16 @@ $newQuizContent = '
           <br>
           <br>
           <fieldset class="form-floating mb-3" id="inputs-wrapper" name="questions[]">
+            <legend class="mb-5">Perguntas</legend>
             <input type="text" class="form-control" id="main-input" placeholder="Pergunta 1" required="true" name="questions[0][title]">
-            <label for="main-input" id="main-label">Pergunta 1 - Título</label>
+            <label for="main-input" id="main-label">Título</label>
             <fieldset name="question-options" class="mt-4" form="new-quiz-form">
                 <input type="text" class="form-control mb-2" placeholder="A" name="questions[0][options][A]"/>
                 <input type="text" class="form-control mb-2" placeholder="B" name="questions[0][options][B]"/>
                 <input type="text" class="form-control mb-2" placeholder="C" name="questions[0][options][C]"/>
                 <input type="text" class="form-control mb-2" placeholder="D" name="questions[0][options][D]"/>
                 <input type="text" class="form-control mb-2" placeholder="E" name="questions[0][options][E]"/>
+                <input type="text" class="form-control mb-2" placeholder="Resposta correta" maxlengh="1" required="true" name="questions[0][correctAnswer]"/>
             </fieldset>
             <button class="w-100 my-3 btn btn-primary" type="button" id="add-button">+</button>
           </fieldset>
@@ -91,18 +93,17 @@ $newQuizContent = '
 ';
 
 $script = "
-        const addButton = document.querySelector('#add-button');
-        const inputsWrapper = document.querySelector('#inputs-wrapper');
-        let inputs = 0;
+    const addButton = document.querySelector('#add-button');
+    const inputsWrapper = document.querySelector('#inputs-wrapper');
+    let inputs = 0;
 
-        if (addButton && inputsWrapper) {
-            addButton.onclick = () => {
-              inputs++;
-              const node = inputsWrapper.cloneNode({deep: true});
-              inputsWrapper.after(node);
-
-            }
+    if (addButton && inputsWrapper) {
+        const node = inputsWrapper.cloneNode({deep: true});
+        addButton.onclick = () => {
+          inputs++;
+          inputsWrapper.querySelector('button').before(node);
         }
+    }
 ";
 
 generateTemplate($newQuizContent, true, $script);

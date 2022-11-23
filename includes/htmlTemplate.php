@@ -1,7 +1,6 @@
 <?php
 
 function generateTemplate($content, $shouldHaveScript = false, $script = ""){
-    
     if ($shouldHaveScript && $script) {     
         echo "
             <!DOCTYPE html>
@@ -17,7 +16,7 @@ function generateTemplate($content, $shouldHaveScript = false, $script = ""){
             <body>
             $content
             <script>
-                $script
+            $script
             </script>
             </body>
             </html>
@@ -40,7 +39,6 @@ function generateTemplate($content, $shouldHaveScript = false, $script = ""){
             </html>
         ";
     }
-
 }
 
 ?>
