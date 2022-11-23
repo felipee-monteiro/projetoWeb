@@ -4,7 +4,7 @@
     "description": null,
     "questions": [
       {
-        "title": "Qual era a cor do cavalo branco de napoleão ?",
+        "title": "Qual era a cor do cavalo branco de napoleão?",
         "options": [
             "Rosa",
             "Branco",
@@ -14,7 +14,7 @@
         "correctAnswer": "C"
       },
       {
-        "title": "Qual era a cor do cavalo branco de napoleão ?",
+        "title": "Qual era a cor do cavalo branco de napoleão?",
         "options": [
             "Branco",
             "Amarelo",
@@ -24,7 +24,7 @@
         "correctAnswer": "C"
       },
       {
-        "title": "Qual era a cor do cavalo branco de napoleão ?",
+        "title": "Qual era a cor do cavalo branco de napoleão?",
         "options": [
             "Rosa",
             "Amarelo",

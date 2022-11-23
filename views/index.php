@@ -11,10 +11,19 @@ $homePageContent = '<div class="px-4 pt-5 my-5 text-center border-bottom">
         <a type="button" href="/projetoWeb/views/allQuizzes.php" class="btn btn-outline-secondary btn-lg px-4">Ver Quizzes</a>
       </div>
     </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
-      <div class="container px-5">
-        <img src="https://as1.ftcdn.net/v2/jpg/04/53/50/30/1000_F_453503025_LCOzZx1PHy1woKaRdNAcn1ba2LJLcBI4.jpg" class="img-fluid  border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-      </div>
+    <div {
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+    
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: fill;
+    }>
+    <div>
+      <img src="https://as1.ftcdn.net/v2/jpg/04/53/50/30/1000_F_453503025_LCOzZx1PHy1woKaRdNAcn1ba2LJLcBI4.jpg">
     </div>
   </div>';
 

@@ -13,7 +13,7 @@ $newQuizContent = '
         <form class="p-4 p-md-5 border rounded-3 bg-light" id="new-quiz-form" method="POST" action="../database/createQuiz.php">
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInput" placeholder="Título" required="true" name="title">
-            <label for="floatingInput">Título</label>
+            <label for="floatingInput">Título do Quiz</label>
           </div>  
           <fieldset>
             <legend>Tema</legend>
@@ -71,7 +71,7 @@ $newQuizContent = '
           <br>
           <fieldset class="form-floating mb-3" id="inputs-wrapper" name="questions[]">
             <input type="text" class="form-control" placeholder="Pergunta 1" required="true" name="questions[0][title]">
-            <label for="main-input" id="main-label">Título</label>
+            <label for="main-input" id="main-label">Pergunta 1</label>
             <fieldset name="question-options" class="mt-4">
                 <input type="text" class="form-control mb-2" placeholder="A" name="questions[0][options][A]" required="true"/>
                 <input type="text" class="form-control mb-2" placeholder="B" name="questions[0][options][B]" required="true"/>
@@ -83,7 +83,7 @@ $newQuizContent = '
           </fieldset>
           <fieldset class="form-floating mb-3" id="inputs-wrapper" name="questions[]">
             <input type="text" class="form-control" placeholder="Pergunta 1" required="true" name="questions[1][title]">
-            <label for="main-input" id="main-label">Título</label>
+            <label for="main-input" id="main-label">Pergunta 2</label>
             <fieldset name="question-options" class="mt-4">
                 <input type="text" class="form-control mb-2" placeholder="A" name="questions[1][options][A]" required="true"/>
                 <input type="text" class="form-control mb-2" placeholder="B" name="questions[1][options][B]" required="true"/>
@@ -95,7 +95,7 @@ $newQuizContent = '
           </fieldset>
           <fieldset class="form-floating mb-3" id="inputs-wrapper" name="questions[]">
             <input type="text" class="form-control" placeholder="Pergunta 1" required="true" name="questions[2][title]">
-            <label for="main-input" id="main-label">Título</label>
+            <label for="main-input" id="main-label">Pergunta 3</label>
             <fieldset name="question-options" class="mt-4">
                 <input type="text" class="form-control mb-2" placeholder="A" name="questions[2][options][A]" required="true"/>
                 <input type="text" class="form-control mb-2" placeholder="B" name="questions[2][options][B]" required="true"/>
@@ -107,7 +107,7 @@ $newQuizContent = '
           </fieldset>
           <fieldset class="form-floating mb-3" id="inputs-wrapper" name="questions[]">
             <input type="text" class="form-control" placeholder="Pergunta 1" required="true" name="questions[3][title]">
-            <label for="main-input" id="main-label">Título</label>
+            <label for="main-input" id="main-label">Pergunta 4</label>
             <fieldset name="question-options" class="mt-4">
                 <input type="text" class="form-control mb-2" placeholder="A" name="questions[3][options][A]"/>
                 <input type="text" class="form-control mb-2" placeholder="B" name="questions[3][options][B]" required="true"/>
@@ -119,7 +119,7 @@ $newQuizContent = '
           </fieldset>
           <fieldset class="form-floating mb-3" id="inputs-wrapper" name="questions[]">
             <input type="text" class="form-control" placeholder="Pergunta 1" required="true" name="questions[4][title]">
-            <label for="main-input" id="main-label">Título</label>
+            <label for="main-input" id="main-label">Pergunta 5</label>
             <fieldset name="question-options" class="mt-4">
                 <input type="text" class="form-control mb-2" placeholder="A" name="questions[4][options][A]"/>
                 <input type="text" class="form-control mb-2" placeholder="B" name="questions[4][options][B]" required="true"/>

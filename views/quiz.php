@@ -58,7 +58,7 @@
                 </div>
                 $content
             </div>
-            <p class='fs-5'>Atualizado em $updatedAt</p>
+            <p class='fs-9'>Atualizado em $updatedAt</p>
         ");
      } else {
         show404Page();
