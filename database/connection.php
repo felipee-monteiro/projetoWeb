@@ -4,5 +4,9 @@
     $dbname = "quiz";
     
     $connection = mysqli_connect($hostname, $username, null, $dbname);
-    $isConnected = $connection->connect_errno;
+
+    if (mysqli_connect_errno()) {
+        echo "An error was ocurred. Contact the system`s administrator.";
+        exit(1);
+    }
 ?>
