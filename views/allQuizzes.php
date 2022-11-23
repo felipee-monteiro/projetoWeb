@@ -30,8 +30,8 @@
         ");
     } else {
         generateTemplate('
-          <div class="text-center">
-            Error 404
+          <div class="h-100 text-center">
+            Nenhum Quiz disponível.
           </div>
         ');
     }

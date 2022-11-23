@@ -18,6 +18,10 @@
         $questions = $data['questions'];
         $mainTitle = $data['title'];
         $theme = $data['theme'];
+        $createdAtAsDateInterface = date_create($quizData['created_at']);
+        $createdAt = date_format($createdAtAsDateInterface, "d/m/Y H:i:s");
+        $updatedAtAsDateInterface = date_create($quizData['updated_at']);
+        $updatedAt = date_format($updatedAtAsDateInterface, "d/m/Y H:i:s");     
 
         foreach ($questions as $key => $question) {
             $correctAnswers[] = $question['correctAnswer'];
@@ -28,12 +32,8 @@
                   <legend>$key - $title</legend>
             ";
             foreach ($question['options'] as $optionKey => $option) {
-                $letter = chr($optionKey);
-
-                var_dump($letter);
-
                 $content = $content."
-                   <input type='radio' data-answer='$optionKey' value='$option' name='answers-$key' />
+                   <input type='radio' data-answer='$key' value='$option' name='answers-$key' />
                    <p>$option</p>   
                 ";
                 if ((count($question['options']) - 1) == $optionKey) {
@@ -42,29 +42,10 @@
                 }
             }
         }
-
+       
         $content = $content."
             <button type='submit' class='btn btn-primary'>Finalizar</button>
         </form>";
-
-        $script = "
-            const form = document.querySelector('form');
-            form.onsubmit = e => {
-                e.preventDefault();
-                const fieldsets = e.target.querySelectorAll('fieldset');
-                const fieldsetsAsArray = Array.from(fieldsets);
-
-                fieldsetsAsArray.forEach(function(item){
-                    const children = Array.from(item.children);
-                    children.forEach(function(item){
-                        if (item.tagName == 'INPUT' && item.checked) {
-                            console.log(item.value);   
-                        }
-                    });
-                    
-                });
-            }
-        ";
 
         generateTemplate("
             <div class='container col-xl-10 col-xxl-8 px-4 py-5'>
@@ -72,16 +53,18 @@
                     <h1 class='display-4 fw-bold lh-1 mb-3'>
                         $mainTitle
                     </h1>
-                    <p class='fs-4'>$theme</p>
+                    <p class='fs-4'>Criado em $createdAt</p>
+                    <h2 class='fs-4'>$theme</h2>
                 </div>
                 $content
             </div>
-        ", true, $script);
+            <p class='fs-5'>Atualizado em $updatedAt</p>
+        ");
      } else {
-        generateTemplate("<div class='d-flex justify-content-center align-items-center'>ERROR 404</div>");
+        show404Page();
      }
  } else {
-    generateTemplate("<div class='d-flex justify-content-center align-items-center'>ERROR 404</div>");
+    show404Page();
  }
 
 ?>

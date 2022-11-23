@@ -39,6 +39,15 @@ function generateTemplate($content, $shouldHaveScript = false, $script = ""){
             </html>
         ";
     }
+
+}
+    
+function show404Page(){
+    return generateTemplate('
+        <div class="h-100 text-center">
+            404
+        </div>
+    ');
 }
 
 ?>
