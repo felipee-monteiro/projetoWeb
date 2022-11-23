@@ -4,5 +4,5 @@
     $dbname = "quiz";
     
     $connection = mysqli_connect($hostname, $username, null, $dbname);
-    $isConnected = $connection->error;
+    $isConnected = $connection->connect_errno;
 ?>
