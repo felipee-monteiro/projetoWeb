@@ -1,4 +1,4 @@
-# projetoWeb
+# PW Quiz
 
 ## Funcionalidades
 
