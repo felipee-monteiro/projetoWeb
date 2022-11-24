@@ -26,7 +26,7 @@ $newQuizContent = '
               <label for = "geografia"> Geografia </label> </label></p>
             </div>
             <div>
-              <p><label> <input type = "checkbox" id = "musica" name = "theme" value = "musica">
+              <p><label> <input type = "checkbox" id = "musica" name = "theme" value = "música">
               <label for = "musica"> Música </label> </label></p>
             </div>
             <div>
@@ -34,15 +34,15 @@ $newQuizContent = '
               <label for = "esportes"> Esportes </label> </label></p>
             </div>
             <div>
-              <p><label> <input type = "checkbox" id = "ciencias" name = "theme" value = "ciencias">
+              <p><label> <input type = "checkbox" id = "ciencias" name = "theme" value = "ciências">
               <label for = "ciencias"> Ciências </label> </label></p>
             </div>
             <div>
-              <p><label> <input type = "checkbox" id = "conhecimentosgerais" name = "theme" value = "conhecimentosgerais">
+              <p><label> <input type = "checkbox" id = "conhecimentosgerais" name = "theme" value = "conhecimentos gerais">
               <label for = "conhecimentosgerais"> Conhecimentos Gerais </ label> </label></p>
             </div>
             <div>
-              <p><label> <input type = "checkbox" id = "matematica" name = "theme" value = "matematica">
+              <p><label> <input type = "checkbox" id = "matematica" name = "theme" value = "matemática">
               <label for = "matematica"> Matemática </label> </label></p>
             </div>
             <div>
@@ -54,17 +54,12 @@ $newQuizContent = '
               <label for = "biologia"> Biologia </label> </label></p>
             </div>
             <div>
-              <p><label> <input type = "checkbox" id = "historia" name = "theme" value = "historia">
+              <p><label> <input type = "checkbox" id = "historia" name = "theme" value = "história">
               <label for = "historia"> História </label> </label></p>
             </div>
             <div>
               <p><label> <input type = "checkbox" id = "games" name = "theme" value = "games">
               <label for = "games"> Games </label> </label></p>
-            </div>
-            <div>
-              <input type = "checkbox" id = "other" name = "theme" value = "other">
-              <label for = "other"> Outro </label> </label></p>
-              <input type = "text" id = "otherValue" name = "other">
             </div>
           </fieldset>
           <br>
