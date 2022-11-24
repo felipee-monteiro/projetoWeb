@@ -6,6 +6,7 @@
     if (isset($_POST['questions'], $_POST['title'], $_POST['theme'], $_POST['questions'])) {
         $questionAsjson = json_encode($_POST);
         $result = doQuizOperations($connection, "INSERT INTO `quiz_data` (`id`, `created_at`, `updated_at`, `data`) VALUES (NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$questionAsjson');");
+        mysqli_close($connection);
         if ($result) {
             header('Location: /views/allQuizzes.php');
         }
