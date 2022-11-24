@@ -33,7 +33,7 @@
             ";
             foreach ($question['options'] as $optionKey => $option) {
                 $content = $content."
-                   <input type='radio' data-answer='$key' value='$option' name='answers-$key' />
+                   <input type='radio' value='$option' name='answers-$key' />
                    <p>$option</p>   
                 ";
                 if ((count($question['options']) - 1) == $optionKey) {
@@ -42,13 +42,36 @@
                 }
             }
         }
+
+        $script = '
+            let values = ["'.implode(",",$correctAnswers).'"];
+            let correctAnswers = 0;
+            const inputs = Array.from(document.querySelectorAll("input[type=radio]:checked"));
+            const alertWrapper = document.getElementById("alert-wrapper");
+
+            inputs.forEach(function(item, index){
+                const value = item.value;
+                if (values[0].includes(value)) {
+                    correctAnswers++;
+                }
+            });
+
+            const alert = document.createElement("div");
+
+            alert.className = "alert alert-success";
+            alert.setAttribute("role", "alert");
+            alert.innerText = "Você acertou " + correctAnswers + " pergunta(s) !";
+
+            alertWrapper.insertAdjacentElement("afterbegin", alert);
+            window.scrollTo({top: 0, behavior: "smooth"});
+        ';
        
         $content = $content."
-            <button type='submit' class='btn btn-primary'>Finalizar</button>
+            <button type='button' onclick='$script' class='btn btn-primary'>Finalizar</button>
         </form>";
 
         generateTemplate("
-            <div class='container col-xl-10 col-xxl-8 px-4 py-5'>
+            <div class='container col-xl-10 col-xxl-8 px-4 py-5' id='alert-wrapper'>
                 <div class='w-100 col-lg-7 text-center' style='margin-bottom: 5rem;'>
                     <h1 class='display-4 fw-bold lh-1 mb-3'>
                         $mainTitle
