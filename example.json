@@ -10,7 +10,7 @@
             "Amarelo",
             "Preto"
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "Branco"
       },
       {
         "title": "Qual era a cor do cavalo branco de napoleão?",
@@ -20,7 +20,7 @@
             "Rosa",
             "Preto"
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "Branco"
       },
       {
         "title": "Qual era a cor do cavalo branco de napoleão?",
@@ -30,7 +30,7 @@
             "Preto",
             "Branco"
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "Branco"
       }
     ]
 }
