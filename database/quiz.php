@@ -1,6 +1,6 @@
 <?php
 
-function getQuizData($conn, $query){
+function doQuizOperations($conn, $query){
     $data = mysqli_query($conn, $query);
     if (is_bool($data)) {
         header("Location: http://localhost/projetoWeb/views/allQuizzes.php");

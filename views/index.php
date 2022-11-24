@@ -1,6 +1,6 @@
 <?php
 
-include '../includes/htmlTemplate.php';
+require_once '../requires/htmlTemplate.php';
 
 $homePageContent = '<div class="px-4 pt-5 my-5 text-center border-bottom">
     <h1 class="display-4 fw-bold">Pw Quiz</h1>

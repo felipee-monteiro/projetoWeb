@@ -1,6 +1,6 @@
 <?php
 
-include "../includes/htmlTemplate.php";
+require_once "../requires/htmlTemplate.php";
 
 $newQuizContent = '
   <div class="container col-xl-10 col-xxl-8 px-4 py-5">

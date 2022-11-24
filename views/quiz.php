@@ -1,14 +1,14 @@
 <?php 
 
- include '../includes/htmlTemplate.php';
+ require_once '../requires/htmlTemplate.php';
  require_once '../database/connection.php';
- require_once '../database/getQuizData.php';
+ require_once '../database/quiz.php';
  
  $correctAnswers = array();
 
  if (isset($_GET['quiz_id']) && is_numeric($_GET['quiz_id'])) {
      $quizId = $_GET['quiz_id'];
-     $quiz = getQuizData($connection, "SELECT * FROM quiz_data WHERE id = '$quizId'");
+     $quiz = doQuizOperations($connection, "SELECT * FROM quiz_data WHERE id = '$quizId'");
      mysqli_close($connection);
 
      if ($quiz) {

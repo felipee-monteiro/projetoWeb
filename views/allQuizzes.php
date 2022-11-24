@@ -1,10 +1,10 @@
 <?php 
     require_once "../database/connection.php";
-    require_once "../database/getQuizData.php";
-    include_once "../includes/htmlTemplate.php";
+    require_once "../database/quiz.php";
+    require_once "../requires/htmlTemplate.php";
 
     $quizContentAsArray = array();
-    $quizes = getQuizData($connection, "SELECT id, data FROM quiz_data");
+    $quizes = doQuizOperations($connection, "SELECT id, data FROM quiz_data");
     mysqli_close($connection);
 
     if ($quizes) {
