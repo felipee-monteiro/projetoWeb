@@ -58,9 +58,10 @@
 
             const alert = document.createElement("div");
 
-            alert.className = "alert alert-success";
+            alert.className = "alert alert-success alert-dismissible fade show";
             alert.setAttribute("role", "alert");
-            alert.innerText = "Você acertou " + correctAnswers + " pergunta(s) !";
+            alert.innerHTML = `<p>Você acertou ${correctAnswers} pergunta(s) !</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`;
 
             alertWrapper.insertAdjacentElement("afterbegin", alert);
             window.scrollTo({top: 0, behavior: "smooth"});
@@ -76,12 +77,12 @@
                     <h1 class='display-4 fw-bold lh-1 mb-3'>
                         $mainTitle
                     </h1>
-                    <p class='fs-4'>Criado em $createdAt</p>
-                    <h2 class='fs-4'>$theme</h2>
+                    <p class='fs-4'>Criado em $createdAt.</p>
+                    <h2 class='fs-4'>$theme.</h2>
                 </div>
                 $content
             </div>
-            <p class='fs-9'>Atualizado em $updatedAt</p>
+            <p class='fs-9'>Atualizado em $updatedAt.</p>
         ");
      } else {
         show404Page();
