@@ -44,7 +44,7 @@ function generateTemplate($content, $shouldHaveScript = false, $script = ""){
     
 function show404Page(){
     return generateTemplate('
-        <div class="h-100 text-center">
+        <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 100vh; height: 100%;">
             404
         </div>
     ');
